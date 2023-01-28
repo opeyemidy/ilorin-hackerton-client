@@ -22,7 +22,7 @@ const Navbar = () => {
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
-            <span>USD</span>
+            <span>NGN</span>
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="center">
-          <Link className ="link" to="/">LAMASTORE</Link>
+          <Link className ="link" to="/">GARMENT FACTORY</Link>
         </div>
         <div className="right">
           <div className="item">
