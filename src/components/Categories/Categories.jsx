@@ -1,7 +1,6 @@
-import React from "react";
-import "./Categories.scss";
-import { Link } from "react-router-dom";
-
+import React from 'react';
+import './Categories.scss';
+import { Link } from 'react-router-dom';
 const Categories = () => {
   return (
     <div className="categories">
@@ -31,7 +30,7 @@ const Categories = () => {
       </div>
       <div className="col">
         <div className="row">
-          {" "}
+          {' '}
           <img
             src="https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
@@ -60,7 +59,7 @@ const Categories = () => {
           </div>
           <div className="col">
             <div className="row">
-              {" "}
+              {' '}
               <img
                 src="https://images.pexels.com/photos/2703202/pexels-photo-2703202.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
