@@ -10,6 +10,8 @@ import Cart from '../Cart/Cart';
 import { useSelector } from 'react-redux';
 import useFetch from '../../hooks/useFetch';
 
+import Logo from "../../img/GG LOGO.png"
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
@@ -17,50 +19,39 @@ const Navbar = () => {
   console.log(data);
   if (loading || !data) return <span>loading</span>;
   return (
-    <div className="navbar">
-      <div className="wrapper">
-        <div className="left">
-          <div className="item">
+    <div className="navbars">
+      <div className="wrappers">
+        <div className="lefty">
+          <div>
             <img src="/img/en.png" alt="" />
             <KeyboardArrowDownIcon />
           </div>
-          <div className="item">
+          {/* <div className="item">
             <span>NGN</span>
             <KeyboardArrowDownIcon />
+          </div> */}
+          <div>
+            <Link className ="link" to="/products/1">Women</Link>
           </div>
-          {data.map((item) => (
-            <div className="item">
-              <Link className="link" to={`/products/${item.id}`}>
-                {item.attributes.title}
-              </Link>
-            </div>
-          ))}
+          <div>
+            <Link className ="link" to="/products/2">Men</Link>
+          </div>
+          <div>
+            <Link className ="link" to="/products/3">Children</Link>
+          </div>
         </div>
         <div className="center">
-          <Link className="link" to="/">
-            GARMENT FACTORY
-          </Link>
+          <Link className ="link" to="/"><img src={Logo} alt="Garment Galore" /></Link>
         </div>
-        <div className="right">
-          <div className="item">
-            <Link className="link" to="/">
-              Homepage
-            </Link>
+        <div className="righty">
+          <div>
+            <Link className ="link" to="/">About</Link>
           </div>
-          <div className="item">
-            <Link className="link" to="/">
-              About
-            </Link>
+          <div>
+            <Link className ="link" to="/">Contact</Link>
           </div>
-          <div className="item">
-            <Link className="link" to="/">
-              Contact
-            </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/">
-              Stores
-            </Link>
+          <div>
+            <Link className ="link" to="/">Stores</Link>
           </div>
           <div className="icons">
             <SearchIcon />

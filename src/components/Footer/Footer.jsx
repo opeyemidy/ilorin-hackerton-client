@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="top">
-        <div className="item">
+        <div className="itemE">
           <h1>Categories</h1>
           <span>Women</span>
           <span>Men</span>
@@ -13,7 +13,7 @@ const Footer = () => {
           <span>Accessories</span>
           <span>New Arrivals</span>
         </div>
-        <div className="item">
+        <div className="itemE">
           <h1>Links</h1>
           <span>FAQ</span>
           <span>Pages</span>
@@ -21,23 +21,25 @@ const Footer = () => {
           <span>Compare</span>
           <span>Cookies</span>
         </div>
-        <div className="item">
+        <div className="itemE">
           <h1>About</h1>
           <span>
-            In partnership with the Kwara Sate Governtment, the Garment Factory ...
+            In partnership with the Kwara Sate Governtment, the Garment Galore
+            ...
           </span>
         </div>
-        <div className="item">
+        <div className="itemE">
           <h1>Contact</h1>
-          <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor.
-          </span>
+          <span>Be in touch with us:</span>
+          <div className="mail">
+            <input type="text" placeholder="Enter your e-mail..." />
+            <button>JOIN US</button>
+          </div>
         </div>
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">Garment Factory</span>
+          <span className="logo">Garment Galore</span>
           <span className="copyright">
             © Copyright 2023. All Rights Reserved
           </span>

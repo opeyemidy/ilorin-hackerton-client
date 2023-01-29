@@ -13,11 +13,9 @@ const FeaturedProducts = ({ type }) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas.
+        We are a clothing manufacturing company and online store that specialises in all kinds of fabrics and branding for both Adult 
+        and kids. Our goal is to take your product concept (idea, sketches, designs) and bring them to reality with no stress in order 
+        for you to focus on your core; which is creativity. At the end of the day, we are about making the world a better place.
         </p>
       </div>
       <div className="bottom">
