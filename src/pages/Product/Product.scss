@@ -1,9 +1,9 @@
-.product {
+.products {
   padding: 20px 50px;
   display: flex;
   gap: 50px;
 
-  .left {
+  .lefty {
     flex: 1;
     display: flex;
     gap: 20px;
@@ -28,7 +28,7 @@
       }
     }
   }
-  .right {
+  .righty {
     flex: 1;
     display: flex;
     flex-direction: column;

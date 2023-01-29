@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -20,8 +20,8 @@ const Navbar = () => {
       <div className="wrappers">
         <div className="lefty">
           <div>
-            <img src="/img/en.png" alt="" />
-            <KeyboardArrowDownIcon />
+            <img src="/img/flag.jpg" alt="" />
+            {/* <KeyboardArrowDownIcon /> */}
           </div>
           {/* <div className="item">
             <span>NGN</span>
