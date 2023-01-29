@@ -1,9 +1,9 @@
-.slider {
+.sliders {
   height: calc(100vh - 80px);
   position: relative;
   overflow: hidden;
 
-  .container {
+  .containers {
     width: 300vw;
     height: 100%;
     display: flex;
@@ -35,5 +35,12 @@
       justify-content: center;
       cursor: pointer;
     }
+  }
+  .slider-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: white;
   }
 }

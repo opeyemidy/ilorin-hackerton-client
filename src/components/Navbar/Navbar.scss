@@ -1,19 +1,20 @@
-.navbar {
+.navbars {
   height: 80px;
+  z-index: 1000;
 
-  .wrapper {
+  .wrappers {
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .item {
+    .items {
       display: flex;
       align-items: center;
       font-size: 18px;
     }
 
-    .left {
+    .lefty {
       display: flex;
       align-items: center;
       gap: 25px;
@@ -22,7 +23,7 @@
       font-size: 30px;
       letter-spacing: 2px;
     }
-    .right {
+    .righty {
       display: flex;
       align-items: center;
       gap: 25px;
