@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss"
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+import useFetch from "../../hooks/useFetch";
+
 
 import Logo from "../../img/GG LOGO.png"
 
