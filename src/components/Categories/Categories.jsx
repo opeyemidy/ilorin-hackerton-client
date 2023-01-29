@@ -1,22 +1,19 @@
-import React from "react";
-import "./Categories.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './Categories.scss';
+import { Link } from 'react-router-dom';
 
-import BasicWear from "./img/BASIC WEAR.jpg";
-import CorporateWear from "./img/CORPORATE WEAR.jpg";
-import KidsWear from "./img/KIDS WEAR.jpg";
-import MuslimWear from "./img/MUSLIM WEAR.jpg";
-import SleepWear from "./img/SLEEP WEAR.png";
-import Uniforms from "./img/UNIFORMS.jpg"
+import BasicWear from './img/BASIC WEAR.jpg';
+import CorporateWear from './img/CORPORATE WEAR.jpg';
+import KidsWear from './img/KIDS WEAR.jpg';
+import MuslimWear from './img/MUSLIM WEAR.jpg';
+import SleepWear from './img/SLEEP WEAR.png';
+import Uniforms from './img/UNIFORMS.jpg';
 const Categories = () => {
   return (
-    <div className="categories">
+    <div className="categories" style={{ overflowX: 'hidden' }}>
       <div className="col">
         <div className="row">
-          <img
-            src= {KidsWear}
-            alt=""
-          />
+          <img src={KidsWear} alt="" />
           <button>
             <Link className="link" to="/products/1">
               Kids Wear
@@ -24,13 +21,10 @@ const Categories = () => {
           </button>
         </div>
         <div className="row">
-          <img
-            src= {MuslimWear}
-            alt=""
-          />
+          <img src={MuslimWear} alt="" />
           <button>
             <Link to="/products/1" className="link">
-              Muslim  Wear
+              Muslim Wear
             </Link>
           </button>
         </div>
@@ -38,10 +32,7 @@ const Categories = () => {
       <div className="col">
         <div className="row">
           {' '}
-          <img
-            src={Uniforms}
-            alt=""
-          />
+          <img src={Uniforms} alt="" />
           <button>
             <Link to="/products/1" className="link">
               Uniforms
@@ -53,10 +44,7 @@ const Categories = () => {
         <div className="row">
           <div className="col">
             <div className="row">
-              <img
-                src={CorporateWear}
-                alt=""
-              />
+              <img src={CorporateWear} alt="" />
               <button>
                 <Link to="/products/1" className="link">
                   Corporate Wear
@@ -67,10 +55,7 @@ const Categories = () => {
           <div className="col">
             <div className="row">
               {' '}
-              <img
-                src={BasicWear}
-                alt=""
-              />
+              <img src={BasicWear} alt="" />
               <button>
                 <Link to="/products/1" className="link">
                   Basic Wear
@@ -80,10 +65,7 @@ const Categories = () => {
           </div>
         </div>
         <div className="row">
-          <img
-            src={SleepWear}
-            alt=""
-          />
+          <img src={SleepWear} alt="" />
           <button>
             <Link to="/products/1" className="link">
               Sleep Wear

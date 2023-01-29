@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import useFetch from "../../hooks/useFetch";
 
 
-import Logo from "../../img/GG LOGO.png"
+import Logo from '../../img/GG LOGO.png';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -31,29 +31,35 @@ const Navbar = () => {
             <span>NGN</span>
             <KeyboardArrowDownIcon />
           </div> */}
-          <div>
-            <Link className ="link" to="/products/1">Women</Link>
-          </div>
-          <div>
-            <Link className ="link" to="/products/2">Men</Link>
-          </div>
-          <div>
-            <Link className ="link" to="/products/3">Children</Link>
-          </div>
+          {data.map((item) => (
+            <div className="item" style={{ textTransform: 'capitalize' }}>
+              <Link className="link" to={`/products/${item.id}`}>
+                {item.attributes.title}
+              </Link>
+            </div>
+          ))}
         </div>
         <div className="center">
-          <Link className ="link" to="/"><img src={Logo} alt="Garment Galore" /></Link>
+          <Link className="link" to="/">
+            <img src={Logo} alt="Garment Galore" />
+          </Link>
         </div>
         <div className="righty">
           <div>
-            <Link className ="link" to="/">About</Link>
+            <Link className="link" to="/">
+              About
+            </Link>
           </div>
           <div>
-            <Link className ="link" to="/">Contact</Link>
+            <Link className="link" to="/">
+              Contact
+            </Link>
           </div>
-          <div>
-            <Link className ="link" to="/">Stores</Link>
-          </div>
+          {/* <div>
+            <Link className="link" to="/">
+              Stores
+            </Link>
+          </div> */}
           <div className="icons">
             <SearchIcon />
             <PersonOutlineOutlinedIcon />

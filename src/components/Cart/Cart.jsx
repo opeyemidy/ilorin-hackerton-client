@@ -1,11 +1,11 @@
-import React from "react";
-import "./Cart.scss";
-import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-import { useSelector } from "react-redux";
-import { removeItem, resetCart } from "../../redux/cartReducer";
-import { useDispatch } from "react-redux";
-import { makeRequest } from "../../makeRequest";
-import { loadStripe } from "@stripe/stripe-js";
+import React from 'react';
+import './Cart.scss';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import { useSelector } from 'react-redux';
+import { removeItem, resetCart } from '../../redux/cartReducer';
+import { useDispatch } from 'react-redux';
+import { makeRequest } from '../../makeRequest';
+import { loadStripe } from '@stripe/stripe-js';
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
@@ -20,18 +20,17 @@ const Cart = () => {
   };
 
   const stripePromise = loadStripe(
-    "pk_test_eOTMlr8usx1ctymXqrik0ls700lQCsX2UB"
+    'pk_test_eOTMlr8usx1ctymXqrik0ls700lQCsX2UB'
   );
   const handlePayment = async () => {
     try {
       const stripe = await stripePromise;
-      const res = await makeRequest.post("/orders", {
+      const res = await makeRequest.post('/orders', {
         products,
       });
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
       });
-
     } catch (err) {
       console.log(err);
     }
@@ -46,7 +45,7 @@ const Cart = () => {
             <h1>{item.title}</h1>
             <p>{item.desc?.substring(0, 100)}</p>
             <div className="price">
-              {item.quantity} x ${item.price}
+              {item.quantity} x &#8358;{item.price}
             </div>
           </div>
           <DeleteOutlinedIcon
@@ -57,7 +56,7 @@ const Cart = () => {
       ))}
       <div className="total">
         <span>SUBTOTAL</span>
-        <span>${totalPrice()}</span>
+        <span>&#8358;{totalPrice()}</span>
       </div>
       <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>
