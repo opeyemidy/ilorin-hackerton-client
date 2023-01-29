@@ -31,7 +31,7 @@ const Navbar = () => {
             <KeyboardArrowDownIcon />
           </div> */}
           {data.map((item) => (
-            <div className="item">
+            <div className="item" style={{ textTransform: 'capitalize' }}>
               <Link className="link" to={`/products/${item.id}`}>
                 {item.attributes.title}
               </Link>
@@ -54,11 +54,11 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link className="link" to="/">
               Stores
             </Link>
-          </div>
+          </div> */}
           <div className="icons">
             <SearchIcon />
             <PersonOutlineOutlinedIcon />
