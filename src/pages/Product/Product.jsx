@@ -1,17 +1,17 @@
-import React from "react";
-import { useState } from "react";
-import "./Product.scss";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import BalanceIcon from "@mui/icons-material/Balance";
-import useFetch from "../../hooks/useFetch";
-import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/cartReducer";
+import React from 'react';
+import { useState } from 'react';
+import './Product.scss';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import BalanceIcon from '@mui/icons-material/Balance';
+import useFetch from '../../hooks/useFetch';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
   const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState("img");
+  const [selectedImg, setSelectedImg] = useState('img');
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Product = () => {
   return (
     <div className="product">
       {loading ? (
-        "loading"
+        'loading'
       ) : (
         <>
           <div className="left">
@@ -31,7 +31,7 @@ const Product = () => {
                   data?.attributes?.img?.data?.attributes?.url
                 }
                 alt=""
-                onClick={(e) => setSelectedImg("img")}
+                onClick={(e) => setSelectedImg('img')}
               />
               <img
                 src={
@@ -39,7 +39,7 @@ const Product = () => {
                   data?.attributes?.img2?.data?.attributes?.url
                 }
                 alt=""
-                onClick={(e) => setSelectedImg("img2")}
+                onClick={(e) => setSelectedImg('img2')}
               />
             </div>
             <div className="mainImg">
@@ -54,7 +54,7 @@ const Product = () => {
           </div>
           <div className="right">
             <h1>{data?.attributes?.title}</h1>
-            <span className="price">${data?.attributes?.price}</span>
+            <span className="price">&#8358;{data?.attributes?.price}</span>
             <p>{data?.attributes?.desc}</p>
             <div className="quantity">
               <button
