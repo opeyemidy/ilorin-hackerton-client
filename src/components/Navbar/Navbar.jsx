@@ -12,9 +12,11 @@ import { useSelector } from "react-redux";
 import Logo from "../../img/GG LOGO.png"
 
 const Navbar = () => {
-  const [open,setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
-
+  const { data, loading, error } = useFetch(`/categories`);
+  console.log(data);
+  if (loading || !data) return <span>loading</span>;
   return (
     <div className="navbars">
       <div className="wrappers">
@@ -51,17 +53,17 @@ const Navbar = () => {
             <Link className ="link" to="/">Stores</Link>
           </div>
           <div className="icons">
-            <SearchIcon/>
-            <PersonOutlineOutlinedIcon/>
-            <FavoriteBorderOutlinedIcon/>
-            <div className="cartIcon" onClick={()=>setOpen(!open)}>
-              <ShoppingCartOutlinedIcon/>
+            <SearchIcon />
+            <PersonOutlineOutlinedIcon />
+            <FavoriteBorderOutlinedIcon />
+            <div className="cartIcon" onClick={() => setOpen(!open)}>
+              <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
             </div>
           </div>
         </div>
       </div>
-      {open && <Cart/>}
+      {open && <Cart />}
     </div>
   );
 };

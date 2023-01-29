@@ -8,8 +8,6 @@ import KidsWear from "./img/KIDS WEAR.jpg";
 import MuslimWear from "./img/MUSLIM WEAR.jpg";
 import SleepWear from "./img/SLEEP WEAR.png";
 import Uniforms from "./img/UNIFORMS.jpg"
-
-
 const Categories = () => {
   return (
     <div className="categories">
@@ -39,7 +37,7 @@ const Categories = () => {
       </div>
       <div className="col">
         <div className="row">
-          {" "}
+          {' '}
           <img
             src={Uniforms}
             alt=""
@@ -68,7 +66,7 @@ const Categories = () => {
           </div>
           <div className="col">
             <div className="row">
-              {" "}
+              {' '}
               <img
                 src={BasicWear}
                 alt=""
