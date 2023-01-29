@@ -325,10 +325,7 @@ const ChooseUs = () => {
                 <span>Why Choose</span> Us?
               </h4>
               <p>
-                When you choose us, you'll feel the benefit of 10 years'
-                experience of Web Development. Because we know the digital world
-                and we know that how to handle it. With working knowledge of
-                online, SEO and social media.
+               We are your reliable and experienced textile partner around the world
               </p>
             </div>
             <div className="col-lg-4 col-sm-6">

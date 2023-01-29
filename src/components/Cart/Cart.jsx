@@ -36,10 +36,10 @@ const Cart = () => {
     }
   };
   return (
-    <div className="cart">
+    <div className="carts">
       <h1>Products in your cart</h1>
       {products?.map((item) => (
-        <div className="item" key={item.id}>
+        <div className="items" key={item.id}>
           <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="" />
           <div className="details">
             <h1>{item.title}</h1>

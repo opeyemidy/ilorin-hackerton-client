@@ -18,12 +18,12 @@ const Product = () => {
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   return (
-    <div className="product">
+    <div className="products">
       {loading ? (
         'loading'
       ) : (
         <>
-          <div className="left">
+          <div className="lefty">
             <div className="images">
               <img
                 src={
@@ -52,7 +52,7 @@ const Product = () => {
               />
             </div>
           </div>
-          <div className="right">
+          <div className="righty">
             <h1>{data?.attributes?.title}</h1>
             <span className="price">&#8358;{data?.attributes?.price}</span>
             <p>{data?.attributes?.desc}</p>
